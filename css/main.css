@@ -1,0 +1,664 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "IBM Plex Sans", sans-serif;
+  background-color: #fdffd5;
+}
+
+.header-page {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 20px 0px 35px;
+  margin-bottom: 40px;
+  width: 100%;
+  height: auto;
+}
+.header-page p {
+  font-size: 2.2rem;
+  font-weight: 500;
+  line-height: 2.6rem;
+  color: #7C6A0A;
+}
+.header-page p:hover {
+  text-decoration: underline;
+  font-size: 2.6rem;
+  cursor: pointer;
+}
+.header-page .header-icons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.header-page .header-icons button {
+  background: none;
+  border-style: none;
+  margin: 0 12px;
+}
+@media (max-width: 600px) {
+  .header-page .header-icons button svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+.header-page .header-icons button:hover {
+  cursor: pointer;
+}
+
+.main-page {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-ecology-impact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+  color: #7C6A0A;
+  margin-bottom: 80px;
+}
+.main-ecology-impact .ecology-impact--img {
+  width: 100%;
+  max-width: 650px;
+  height: 100%;
+  min-height: 330px;
+  max-height: 680px;
+  background-image: url("../assets/img/main-2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  order: 0;
+  margin-bottom: 20px;
+  border-radius: 12px;
+}
+.main-ecology-impact .ecology-impact--info {
+  order: 1;
+}
+.main-ecology-impact .ecology-impact--info h1 {
+  font-size: 2.8rem;
+  line-height: 3.5rem;
+  font-weight: 600;
+}
+.main-ecology-impact .ecology-impact--info p {
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  font-weight: 400;
+  margin: 15px 0;
+}
+.main-ecology-impact .ecology-impact--info button {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1.3rem;
+  line-height: 1.7rem;
+  width: 150px;
+  height: 34px;
+  background-color: #FA9500;
+  border-style: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.main-ecology-impact .ecology-impact--info button:hover {
+  border: 2px solid #FA9500;
+  background-color: #ffffff;
+  color: #FA9500;
+  transform: scale(1.1);
+}
+@media (min-width: 680px) {
+  .main-ecology-impact {
+    flex-direction: row;
+    width: 90%;
+  }
+  .main-ecology-impact .ecology-impact--img {
+    min-width: 306px;
+    min-height: 370px;
+    order: 1;
+  }
+  .main-ecology-impact .ecology-impact--info h1 {
+    font-size: 4rem;
+    line-height: 5.8rem;
+    margin-bottom: 30px;
+    padding-right: 20px;
+  }
+  .main-ecology-impact .ecology-impact--info p {
+    font-size: 1.8rem;
+    line-height: 2rem;
+    margin-bottom: 50px;
+    padding-right: 20px;
+  }
+}
+@media (min-width: 900px) {
+  .main-ecology-impact {
+    padding: 0px 20px 0px 35px;
+    width: 100%;
+    height: 800px;
+    padding-bottom: 160px;
+  }
+  .main-ecology-impact .ecology-impact--info h1 {
+    padding-top: 40px;
+    font-size: 6rem;
+    line-height: 7.8rem;
+  }
+  .main-ecology-impact .ecology-impact--info p {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+  .main-ecology-impact .ecology-impact--info button {
+    font-size: 1.5rem;
+    width: 170px;
+    height: 50px;
+  }
+  .main-ecology-impact .ecology-impact--img {
+    min-width: 450px;
+  }
+}
+@media (min-width: 1080px) {
+  .main-ecology-impact .ecology-impact--info p {
+    padding-right: 100px;
+    margin-top: 100px;
+    margin-bottom: 130px;
+  }
+}
+
+.main-skincare {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+  margin-bottom: 80px;
+  color: #7C6A0A;
+}
+@media (min-width: 680px) {
+  .main-skincare {
+    width: 90%;
+  }
+}
+.main-skincare .skincare--title {
+  font-size: 2.2rem;
+  font-weight: 500;
+  line-height: 2.6;
+}
+@media (min-width: 790px) {
+  .main-skincare .skincare--title {
+    font-size: 5rem;
+    font-weight: 400;
+    line-height: 6.5rem;
+  }
+}
+
+.main-furniture, .main-about-us {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+  margin-bottom: 80px;
+  color: #7C6A0A;
+}
+@media (min-width: 680px) {
+  .main-furniture, .main-about-us {
+    width: 90%;
+  }
+}
+.main-furniture .furniture--title, .main-about-us .furniture--title, .main-about-us .about-us-section--title {
+  font-size: 2.2rem;
+  font-weight: 500;
+  line-height: 2.6;
+}
+@media (min-width: 790px) {
+  .main-furniture .furniture--title, .main-about-us .furniture--title, .main-about-us .about-us-section--title {
+    font-size: 5rem;
+    font-weight: 400;
+    line-height: 6.5rem;
+  }
+}
+
+.slider-container-card {
+  display: flex;
+}
+@media (max-width: 740px) {
+  .slider-container-card {
+    gap: 30px;
+    height: 316px;
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+  }
+}
+@media (min-width: 740px) {
+  .slider-container-card {
+    height: auto;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    overflow: hidden;
+  }
+}
+
+.card {
+  scroll-snap-align: center;
+  position: relative;
+  width: 178px;
+  height: 275px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 15px 0;
+}
+.card.card__skincare {
+  background-color: #FFDAC6;
+}
+.card.card__skincare svg {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  cursor: pointer;
+}
+@media (max-width: 680px) {
+  .card.card__skincare svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+.card.card__furniture {
+  color: #ffffff;
+  background-color: #BABD8D;
+}
+.card.card__furniture svg {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  cursor: pointer;
+}
+@media (max-width: 680px) {
+  .card.card__furniture svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+@media (min-width: 680px) {
+  .card.card__furniture svg {
+    top: 2px;
+    right: 4px;
+  }
+}
+@media (min-width: 790px) {
+  .card {
+    width: 200px;
+    height: 300px;
+  }
+}
+@media (min-width: 890px) {
+  .card {
+    width: 230px;
+    height: 330px;
+  }
+}
+@media (min-width: 1023px) {
+  .card {
+    width: 260px;
+    height: 360px;
+  }
+}
+@media (min-width: 1156px) {
+  .card {
+    width: 290px;
+  }
+}
+@media (min-width: 1289px) {
+  .card {
+    width: 300px;
+    height: 350px;
+  }
+}
+@media (min-width: 1333px) {
+  .card {
+    width: 310px;
+  }
+}
+
+.img {
+  width: 100%;
+  min-width: 132px;
+  height: 168px;
+  border-radius: 5px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.img.img__cepillo {
+  background-image: url(../assets/img/products/toothbrush.jpg);
+}
+.img.img__hand-cream {
+  background-image: url(../assets/img/products/hand-cream.jpeg);
+}
+.img.img__serum {
+  background-image: url(../assets/img/products/serum.jpg);
+}
+.img.img__kit-skincare {
+  background-image: url(../assets/img/products/guasha-kit.jpg);
+}
+.img.img__jabones {
+  background-image: url(../assets/img/products/organic-soap.jpg);
+}
+.img.img__kit-viaje {
+  background-image: url(../assets/img/products/organic-kit.jpg);
+}
+.img.img__silla-bambu {
+  background-image: url(../assets/img/furniture/wood-chair.jpg);
+}
+.img.img__banquito {
+  background-image: url(../assets/img/furniture/small-table.jpeg);
+}
+.img.img__mesita-decorativa {
+  background-image: url(../assets/img/furniture/stand.jpg);
+}
+.img.img__espejo {
+  background-image: url(../assets/img/furniture/mirror.jpg);
+}
+.img.img__cajonera {
+  background-image: url(../assets/img/furniture/mueble.jpg);
+}
+.img.img__mesita-desayuno {
+  background-image: url(../assets/img/furniture/mini-table.jpg);
+}
+.img.img__buro {
+  background-image: url(../assets/img/furniture/stand-table.jpg);
+}
+.img.img__bambu-lamp {
+  background-image: url(../assets/img/furniture/desk-lamp.jpg);
+}
+.img.img__mesa-decorativa {
+  background-image: url(../assets/img/furniture/table.jpg);
+}
+@media (min-width: 890px) {
+  .img {
+    height: 200px;
+  }
+}
+
+.subtitle {
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  font-weight: 600;
+  margin-top: 10px;
+  margin-bottom: 4px;
+}
+@media (min-width: 790px) {
+  .subtitle {
+    font-size: 2rem;
+    line-height: 3rem;
+    margin-bottom: 8px;
+  }
+}
+
+.text {
+  font-size: 0.82rem;
+  line-height: 1rem;
+  font-weight: 400;
+}
+@media (min-width: 790px) {
+  .text {
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+  }
+}
+
+.main-about-us {
+  margin-top: 80px;
+}
+.main-about-us .mission-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 40px;
+}
+.main-about-us .mission-container .earth,
+.main-about-us .mission-container .ecology {
+  width: 40%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.main-about-us .mission-container .earth p,
+.main-about-us .mission-container .ecology p {
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 2.4rem;
+  color: #e86424;
+  text-align: center;
+  margin: 0 auto;
+}
+@media (max-width: 600px) {
+  .main-about-us .mission-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    gap: 55px;
+  }
+  .main-about-us .mission-container .earth,
+  .main-about-us .mission-container .ecology {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  }
+  .main-about-us .mission-container .earth img,
+  .main-about-us .mission-container .ecology img {
+    width: 85px;
+    height: 85px;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .main-about-us .mission-container .earth p,
+  .main-about-us .mission-container .ecology p {
+    font-size: 1.3rem;
+    font-weight: 500;
+    line-height: 2.1rem;
+    color: #e86224;
+  }
+}
+@media (max-width: 760px) {
+  .main-about-us img {
+    width: 120px;
+    height: 120px;
+  }
+  .main-about-us p {
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color: #e86224;
+  }
+}
+
+.main-gallery, .main-location {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  width: 80%;
+  height: auto;
+  margin: 70px auto;
+}
+@media (min-width: 680px) {
+  .main-gallery, .main-location {
+    width: 90%;
+  }
+}
+.main-gallery .about-us-section--title, .main-location .about-us-section--title {
+  color: #7C6A0A;
+  font-size: 2.2rem;
+  font-weight: 500;
+  line-height: 2.6;
+}
+@media (min-width: 790px) {
+  .main-gallery .about-us-section--title, .main-location .about-us-section--title {
+    font-size: 5rem;
+    font-weight: 400;
+    line-height: 6.5rem;
+  }
+}
+.main-gallery .gallery-images-container, .main-location .gallery-images-container {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+.main-gallery .gallery-images-container img, .main-location .gallery-images-container img {
+  width: 100%;
+  height: 300px;
+  border-radius: 7px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 5px 35%;
+     object-position: 5px 35%;
+  filter: brightness(90%);
+}
+@media (min-width: 520px) {
+  .main-gallery .gallery-images-container, .main-location .gallery-images-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+  .main-gallery .gallery-images-container img, .main-location .gallery-images-container img {
+    width: 28vw;
+    height: 200px;
+  }
+}
+@media (min-width: 680px) {
+  .main-gallery .gallery-images-container, .main-location .gallery-images-container {
+    justify-content: space-between;
+  }
+  .main-gallery .gallery-images-container img, .main-location .gallery-images-container img {
+    height: 250px;
+  }
+}
+@media (min-width: 790px) {
+  .main-gallery .gallery-images-container, .main-location .gallery-images-container {
+    margin-top: 20px;
+  }
+  .main-gallery .gallery-images-container img, .main-location .gallery-images-container img {
+    height: 300px;
+  }
+  .main-gallery .gallery-images-container img:hover, .main-location .gallery-images-container img:hover {
+    transform: scale(1.1);
+    filter: brightness(97%);
+  }
+}
+@media (min-width: 1024px) {
+  .main-gallery .gallery-images-container img, .main-location .gallery-images-container img {
+    height: 350px;
+  }
+}
+
+.main-location {
+  padding-bottom: 80px;
+}
+.main-location .location-map {
+  width: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.main-location .location-map img {
+  max-width: 1300px;
+  max-height: 596px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.main-location h3 {
+  font-size: 2rem;
+  line-height: 1.8rem;
+  font-weight: 400;
+  color: #e86424;
+  margin-top: 25px;
+}
+@media (min-width: 900px) {
+  .main-location h3 {
+    font-size: 3.5rem;
+    line-height: 4.5rem;
+  }
+}
+.main-location p {
+  font-size: 1.4rem;
+  line-height: 2rem;
+  font-weight: 400;
+  color: #e86424;
+}
+@media (min-width: 900px) {
+  .main-location p {
+    font-size: 2.5rem;
+    line-height: 3.2rem;
+  }
+}
+
+.footer-page {
+  background-color: #FA9500;
+  width: 100%;
+  height: 270px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+  color: #ffffff;
+}
+.footer-page h3 {
+  font-size: 2rem;
+  line-height: 2.7rem;
+  font-weight: 500;
+}
+.footer-page p {
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  font-weight: 400;
+}
+.footer-page .footer-social-media {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  margin-top: 15px;
+}
+.footer-page .footer-social-media img {
+  cursor: pointer;
+}
+@media (max-width: 600px) {
+  .footer-page .footer-social-media img {
+    width: 27px;
+    height: 27px;
+  }
+}
+@media (min-width: 600px) {
+  .footer-page .footer-social-media {
+    justify-content: center;
+  }
+}
+@media (max-width: 790px) {
+  .footer-page .footer-social-media img {
+    width: 34px;
+    height: 34px;
+  }
+}/*# sourceMappingURL=main.css.map */

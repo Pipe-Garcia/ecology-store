@@ -1,0 +1,601 @@
+$primary-color: #fdffd5;
+$secondary-color: #FFDAC6;
+$tertiary-color: #BABD8D;
+$primary-text-color: #7C6A0A;
+$font-stack: 'IBM Plex Sans', sans-serif;
+$font-stack-titles: 5rem;
+$font-stack-text: 2.5rem;
+
+@mixin flexCenter($direction, $content:null, $align:null) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $content;
+    align-items: $align;
+}
+
+@mixin buttonStyle {
+    background: none;
+    border-style: none;
+}
+
+@mixin paragraph($size, $weight, $line-height, $color) {
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $line-height;
+    color: $color;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    font-family: $font-stack;
+    background-color: $primary-color;
+}
+.header-page {
+    @include flexCenter(row,space-between,center);
+    padding: 30px 20px 0px 35px;
+    margin-bottom: 40px;
+    width: 100%;
+    height: auto;
+    p {
+        font-size: 2.2rem;
+        font-weight: 500;
+        line-height: 2.6rem;
+        color: $primary-text-color;
+    &:hover{
+        text-decoration: underline;
+        font-size: 2.6rem;
+        cursor: pointer;
+    }    
+    }
+    .header-icons {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        button {
+                @include buttonStyle;
+                margin: 0 12px;
+            @media (max-width:600px) {
+                svg {
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+            &:hover {
+            cursor: pointer;
+            }
+        } 
+    }
+}
+
+.main-page {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-ecology-impact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    color: $primary-text-color;
+    margin-bottom: 80px;
+    .ecology-impact--img {
+        width: 100%;
+        max-width: 650px;
+        height: 100%;
+        min-height: 330px;
+        max-height: 680px;
+        background-image: url("../assets/img/main-2.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        order: 0;
+        margin-bottom: 20px;
+        border-radius: 12px;
+    }
+    .ecology-impact--info {
+        order: 1;
+        h1 {
+            font-size: 2.8rem;
+            line-height: 3.5rem;
+            font-weight: 600;
+        }
+        p {
+           font-size: 1.2rem;
+           line-height: 1.6rem;
+           font-weight: 400;
+           margin: 15px 0; 
+        }
+        button {
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 1.3rem;
+            line-height: 1.7rem;
+            width: 150px;
+            height: 34px;
+            background-color: #FA9500;
+            border-style: none;
+            border-radius: 20px;
+            cursor: pointer;
+            &:hover {
+                border: 2px solid #FA9500;
+                background-color: #ffffff;
+                color: #FA9500;
+                transform: scale(1.1);
+            }
+        }
+    }
+    @media (min-width:680px) {
+        flex-direction: row;
+        width: 90%;
+        .ecology-impact--img {
+            min-width: 306px;
+            min-height: 370px;
+            order: 1;
+        }
+        .ecology-impact--info {
+            h1 {
+                font-size: 4rem;
+                line-height: 5.8rem;
+                margin-bottom: 30px;
+                padding-right: 20px;
+            }
+            p {
+                font-size: 1.8rem;
+                line-height: 2rem;
+                margin-bottom: 50px;
+                padding-right: 20px;
+            }
+        }
+    }
+    @media (min-width:900px) {
+        padding: 0px 20px 0px 35px;
+        width: 100%;
+        height: 800px;
+        padding-bottom: 160px;
+        .ecology-impact--info {
+            h1 {
+                padding-top: 40px;
+                font-size: 6rem;
+                line-height: 7.8rem;
+            }
+            p {
+                font-size: $font-stack-text;
+                line-height: 3rem;
+            }
+            button {
+                font-size: 1.5rem;
+                width: 170px;
+                height: 50px;
+            }
+        }
+        .ecology-impact--img {
+            min-width: 450px;
+        }
+    }
+    @media (min-width:1080px) {
+        .ecology-impact--info {
+            p {
+                padding-right: 100px;
+                margin-top: 100px;
+                margin-bottom: 130px;
+            }
+        }
+    }
+}
+
+.main-skincare {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    margin-bottom: 80px;
+    color: $primary-text-color;
+    @media (min-width:680px) {
+        width: 90%;
+    }
+    .skincare--title {
+        font-size: 2.2rem;
+        font-weight: 500;
+        line-height: 2.6;
+        @media (min-width:790px) {
+            font-size: $font-stack-titles;
+            font-weight: 400;
+            line-height: 6.5rem;
+        }
+    }
+}
+.main-furniture {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    margin-bottom: 80px;
+    color: $primary-text-color;
+    @media (min-width:680px) {
+        width: 90%;
+    }
+    .furniture--title {
+        font-size: 2.2rem;
+        font-weight: 500;
+        line-height: 2.6;
+        @media (min-width:790px) {
+            font-size: $font-stack-titles;
+            font-weight: 400;
+            line-height: 6.5rem;
+        }
+    }
+}
+.slider-container-card {
+    display: flex;
+    @media (max-width:740px) {
+        gap: 30px;
+        height: 316px;
+        overflow-x: scroll;
+        overscroll-behavior-x: contain;
+        scroll-snap-type: x proximity;
+    }
+    @media (min-width:740px) {
+       height: auto;
+       justify-content: space-between;
+       flex-wrap: wrap;
+       overflow: hidden;
+    }
+}
+
+.card {
+    scroll-snap-align: center;
+    position: relative;
+    width: 178px;
+    height: 275px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 15px 0;
+    &.card__skincare {
+        background-color: #FFDAC6;
+        svg {
+            position: absolute;
+            top: 7px;
+            right: 7px;
+            cursor: pointer;
+            @media (max-width:680px) {
+                width: 16px;
+                height: 16px;
+            }
+        }    
+    }
+    &.card__furniture {
+        color: #ffffff;
+        background-color: #BABD8D;
+        svg {
+            position: absolute;
+            top: 7px;
+            right: 7px;
+            cursor: pointer;
+            @media (max-width:680px) {
+                width: 16px;
+                height: 16px;
+            }
+            @media (min-width:680px) {
+                top: 2px;
+                right: 4px;
+            }
+        }
+    }
+    @media (min-width:790px) {
+        width: 200px;
+        height: 300px;
+    }
+    @media (min-width:890px) {
+        width: 230px;
+        height: 330px;
+    }
+    @media (min-width:1023px) {
+        width: 260px;
+        height: 360px;
+    }
+    @media (min-width:1156px) {
+        width: 290px;
+    }
+    @media (min-width:1289px) {
+        width: 300px;
+        height: 350px;
+    }
+    @media (min-width:1333px) {
+        width: 310px;
+    }
+}
+.img {
+    width: 100%;
+    min-width: 132px;
+    height: 168px;
+    border-radius: 5px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    &.img__cepillo {
+        background-image: url(../assets/img/products/toothbrush.jpg);
+    }
+    &.img__hand-cream {
+        background-image: url(../assets/img/products/hand-cream.jpeg);
+    }
+    &.img__serum {
+        background-image: url(../assets/img/products/serum.jpg);
+    }
+    &.img__kit-skincare {
+        background-image: url(../assets/img/products/guasha-kit.jpg);
+    }
+    &.img__jabones {
+        background-image: url(../assets/img/products/organic-soap.jpg);
+    }
+    &.img__kit-viaje {
+        background-image: url(../assets/img/products/organic-kit.jpg);
+    }
+    &.img__silla-bambu {
+        background-image: url(../assets/img/furniture/wood-chair.jpg);
+    }
+    &.img__banquito {
+        background-image: url(../assets/img/furniture/small-table.jpeg);
+    }
+    &.img__mesita-decorativa {
+        background-image: url(../assets/img/furniture/stand.jpg);
+    }
+    &.img__espejo {
+        background-image: url(../assets/img/furniture/mirror.jpg);
+    }
+    &.img__cajonera {
+        background-image: url(../assets/img/furniture/mueble.jpg);
+    }
+    &.img__mesita-desayuno {
+        background-image: url(../assets/img/furniture/mini-table.jpg);
+    }
+    &.img__buro {
+        background-image: url(../assets/img/furniture/stand-table.jpg);
+    }
+    &.img__bambu-lamp {
+        background-image: url(../assets/img/furniture/desk-lamp.jpg);
+    }
+    &.img__mesa-decorativa {
+        background-image: url(../assets/img/furniture/table.jpg);
+    }
+    @media (min-width:890px) {
+        height: 200px;
+    }
+}
+.subtitle {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 4px;
+    @media (min-width:790px) {
+        font-size: 2rem;
+        line-height: 3rem;
+        margin-bottom: 8px;
+    }
+}
+.text {
+    font-size: .82rem;
+    line-height: 1rem;
+    font-weight: 400;
+    @media (min-width:790px) {
+        font-size: 1.1rem;
+        line-height: 1.5rem;
+    }
+}
+
+.main-about-us {
+    margin-top: 80px;
+    @extend .main-furniture;
+    .about-us-section--title {
+        @extend .furniture--title;
+    }
+    .mission-container {
+        @include flexCenter(row, space-around, center);
+        margin-top: 40px;
+        .earth,
+        .ecology {
+            width: 40%;
+            @include flexCenter(row, center, center);
+            p {
+                @include paragraph(2rem, 500, 2.4rem, #e86424);
+                text-align: center;
+                margin: 0 auto;
+            }
+            
+        }
+    }
+    @media (max-width:600px) {
+        .mission-container {
+            @include flexCenter(column, center, center);
+            margin-top: 60px;
+            gap: 55px;
+            .earth,
+            .ecology {
+                @include flexCenter(column, center, center);
+                gap: 15px;
+                img {
+                    width: 85px;
+                    height: 85px;
+                    object-fit: contain;
+                }
+                p {
+                  @include paragraph(1.3rem, 500, 2.1rem, #e86224);  
+                }
+            }
+        }
+    }
+    @media (max-width: 760px) {
+        img {
+            width: 120px;
+            height: 120px;
+        }
+        p {
+            @include paragraph(1.6rem, 500, 1.8rem, #e86224);  
+        }
+    }
+}
+
+.main-gallery {
+    @include flexCenter(column, center);
+    gap: 20px;
+    width: 80%;
+    height: auto;
+    margin: 70px auto;
+    @media (min-width:680px) {
+        width: 90%;
+    }
+    .about-us-section--title {
+        color: $primary-text-color;
+        font-size: 2.2rem;
+        font-weight: 500;
+        line-height: 2.6;
+        @media (min-width:790px) {
+            font-size: $font-stack-titles;
+            font-weight: 400;
+            line-height: 6.5rem;
+        }
+    }
+    .gallery-images-container {
+        width: 100%;
+        margin: 0 auto;
+        @include flexCenter(column, center, center);
+        gap: 40px;
+        img {
+            width: 100%;
+            height: 300px;
+            border-radius: 7px;
+            object-fit: cover;
+            object-position: 5px 35%;
+            filter: brightness(90%);
+        }
+        @media (min-width:520px) {
+            @include flexCenter(row);
+            gap: 10px;
+            img {
+                width: 28vw;
+                height: 200px;
+            }
+        }
+        @media (min-width:680px) {
+            justify-content: space-between;
+            img {
+                height: 250px;
+            }
+        }
+        @media (min-width:790px) {
+            margin-top: 20px;
+            img {
+                height: 300px;
+                &:hover {
+                    transform: scale(1.1);
+                    filter: brightness(97%);
+                }
+            }
+        }
+        @media (min-width:1024px) {
+            img {
+                height: 350px;
+            }
+        }
+    }
+
+}
+
+.main-location {
+    @extend .main-gallery;
+    padding-bottom: 80px;
+    .location-map {
+        width: 100%;
+        overflow: hidden;
+        margin: 0 auto;
+        img {
+            max-width: 1300px;
+            max-height: 596px;
+            object-fit: contain;
+        }
+    }
+    h3 {
+        font-size: 2rem;
+        line-height: 1.8rem;
+        font-weight: 400;
+        color: #e86424;
+        margin-top: 25px;
+        @media (min-width:900px) {
+            font-size: 3.5rem;
+            line-height: 4.5rem;
+        }
+    }
+    p {
+        font-size: 1.4rem;
+        line-height: 2rem;
+        font-weight: 400;
+        color: #e86424;
+        @media (min-width:900px) {
+            font-size: 2.5rem;
+            line-height: 3.2rem;
+        }
+    }
+}
+
+.footer-page {
+    $background: #FA9500;
+    background-color: $background;
+    width: 100%;
+    height: 270px;
+    @include flexCenter(column);
+    gap: 15px;
+    padding: 20px;
+    color: #ffffff;
+    h3 {
+        font-size: 2rem;
+        line-height: 2.7rem;
+        font-weight: 500;
+    }
+    p {
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+        font-weight: 400;
+    }
+    .footer-social-media {
+        display: flex;
+        gap: 20px;
+        width: 100%;
+        margin-top: 15px;
+        img {
+            cursor: pointer;
+        }
+        @media (max-width:600px) {
+            img {
+                width: 27px;
+                height: 27px;
+            }
+        }
+        @media (min-width:600px) {
+            justify-content: center;
+        }
+        @media (max-width:790px) {
+            img {
+                width: 34px;
+                height: 34px;
+            }
+        }
+    }
+}
