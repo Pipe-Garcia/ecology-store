@@ -15,6 +15,7 @@ This project is a responsive online store focused on offering environmentally fr
   <ul> <li>HTML</li> 
    <li> CSS</li> 
    <li>SCSS</li> 
+   <li>Figma</li>
   </ul>  
 
 <h2>Getting Started</h2>
